@@ -66,3 +66,8 @@ Route::get('/listado-videojuegos', function () {
         ->with('listado_videojuegos', $listado_videojuegos);
     
 });
+
+Route::get('/pagina-generica', function () {
+    return view('pagina');
+
+});
