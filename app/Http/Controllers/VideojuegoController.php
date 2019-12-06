@@ -14,7 +14,7 @@ class VideojuegoController extends Controller
         ]);
     }
 
-    public function detalle(){
+    public function detalle($year = null){
         return view('videojuego.detalle');
     }
 

@@ -24,7 +24,8 @@ Route::get('/', function () {
 Route::get('/videojuegos/{pagina?}', 'VideojuegoController@index');
 
 // Poner un Name a la ruta /detalle
-Route::get('/detalle', [
+Route::get('/detalle/{year?}', [
+    'middleware' => 'testyear',
     'uses' => 'VideojuegoController@detalle',
     // indicamos el alias
     'as' => 'detalle.videojuego'
