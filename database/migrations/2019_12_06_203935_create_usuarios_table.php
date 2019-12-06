@@ -23,6 +23,16 @@ class CreateUsuariosTable extends Migration
             // nos permite crear los campos la ultima vez que modifique registro y la primera vez que se creó
             $table->timestamps();
         });
+       
+        DB::statement("
+            CREATE TABLE usuarios(
+                id int(255) auto_increment not null,
+                nombre varchar(255),
+                email varchar(255),
+                password varchar(255),
+                PRIMARY KEY(id)
+            );"
+        );
     }
 
     /**
