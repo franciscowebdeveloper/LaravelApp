@@ -30,6 +30,10 @@ Route::get('/detalle/{year?}', [
     // indicamos el alias
     'as' => 'detalle.videojuego'
 ]);
+Route::get('/formulario', 'VideojuegoController@mostrarFormulario');
+
+// tipo post para recibir
+Route::post('/recibir-datos-formulario', 'VideojuegoController@recibirDatosFormulario');
 
 // Rederigir de una accion a otra o de una url a otra
 Route::get('/rederigir', 'VideojuegoController@rederigir');
