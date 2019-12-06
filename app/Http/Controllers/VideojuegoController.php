@@ -17,4 +17,12 @@ class VideojuegoController extends Controller
     public function detalle(){
         return view('videojuego.detalle');
     }
+
+    public function rederigir(){
+        // con action()
+        return redirect()->action('VideojuegoController@detalle');
+        // con route()
+        // return redirect()->route('detalle.videojuego');
+        
+    }
 }

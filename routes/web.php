@@ -30,6 +30,8 @@ Route::get('/detalle', [
     'as' => 'detalle.videojuego'
 ]);
 
+// Rederigir de una accion a otra o de una url a otra
+Route::get('/rederigir', 'VideojuegoController@rederigir');
 
 Route::resource('usuario', 'UsuarioController');
 
