@@ -8,12 +8,18 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
+
+// |----------------------------
+// GET: Conseguir datos
+// POST: Guardar datos
+// PUT: Actualizar datos 
+// DELETE: Borrar datos
+// |----------------------------
+
 |
 */
 
-
-// php artisan route:list
-
+//Command Terminal ----> php artisan route:list
 
 // index
 Route::get('/', function () {
@@ -40,12 +46,12 @@ Route::get('/rederigir', 'VideojuegoController@rederigir');
 
 Route::resource('usuario', 'UsuarioController');
 
-// |----------------------------
-// GET: Conseguir datos
-// POST: Guardar datos
-// PUT: Actualizar datos 
-// DELETE: Borrar datos
-// |----------------------------
+// RUTAS DE FRUTAS
+Route::group(['prefix' => 'frutas'], function(){
+    Route::get('index', 'FrutasController@index');
+});
+
+
 
 // // función anónima function()
 // Route::get('/mostrar-fecha', function () {

@@ -28,15 +28,15 @@ class CreateUsuariosTable extends Migration
         */
 
         // Migracion con SQL
-        DB::statement("
-            CREATE TABLE usuarios(
-                id int(255) auto_increment not null,
-                nombre varchar(255),
-                email varchar(255),
-                password varchar(255),
-                PRIMARY KEY(id)
-            );"
-        );
+        // DB::statement("
+        //     CREATE TABLE usuarios(
+        //         id int(255) auto_increment not null,
+        //         nombre varchar(255),
+        //         email varchar(255),
+        //         password varchar(255),
+        //         PRIMARY KEY(id)
+        //     );"
+        // );
     }
 
     /**
