@@ -44,7 +44,15 @@ class FrutasController extends Controller
             'descripcion' => $request->input('descripcion'),
         ));
 
-        //hacemos una redirección cuando terminemos de guardar registro
-        return redirect()->action('FrutasController@index');
+        //hacemos una redirección cuando terminemos de guardar registro y pasamos como parámetro un dato ('status') con ->with, le pasamos una sesion
+        return redirect()->action('FrutasController@index')->with('status', 'Fruta creada correctamente');
+    }
+
+    public function delete($id){
+        //borrar registro
+        $fruta = DB::table('frutas')->where('id', $id)->delete();
+        //hacemos una redirección cuando terminemos eliminado registro y pasamos como parámetro un dato ('status') con ->with, le pasamos una sesion
+        return redirect()->action('FrutasController@index')->with('status', 'Fruta borrada correctamente');
+
     }
 }

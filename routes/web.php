@@ -53,6 +53,7 @@ Route::group(['prefix' => 'frutas'], function(){
     Route::post('save', 'FrutasController@save');
     // parametro id
     Route::get('detail/{id}', 'FrutasController@detail');
+    Route::get('delete/{id}', 'FrutasController@delete');
 });
 
 
