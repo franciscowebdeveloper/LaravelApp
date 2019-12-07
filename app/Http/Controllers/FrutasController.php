@@ -9,7 +9,9 @@ class FrutasController extends Controller
 {
     public function index(){
         // obtener todos los registros de la tabla frutas
-        $frutas = DB::table('frutas')->get();
+        $frutas = DB::table('frutas')
+                ->orderBy('id', 'desc')
+                ->get();
 
         // como espera un array hay que mandarle como parametro un array con los valores
         return view('frutas.index', [

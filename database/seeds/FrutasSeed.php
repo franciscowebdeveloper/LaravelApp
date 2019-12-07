@@ -13,7 +13,7 @@ class FrutasSeed extends Seeder
     {
          // Queremos insertar 20 registros
          for($i = 0; $i <= 20; $i++){
-            // tabla videojuegos
+            // tabla frutas
             DB::table('frutas')->insert(array(
                 'nombre' => 'Naranja '.$i,
                 'descripcion' => 'Descripción de la fruta '.$i,
