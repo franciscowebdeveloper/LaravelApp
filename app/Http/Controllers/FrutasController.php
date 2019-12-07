@@ -17,4 +17,16 @@ class FrutasController extends Controller
             'frutas' => $frutas
         ]);
     }
+
+    // parametro id que vendrá por la url
+    public function detail($id){
+        // condicion where() donde coja la misma id que le viene por parametro por la url
+        //con el metodo first saca un objeto limpio, lo comprobamos haciendo un var_dump
+        $fruta = DB::table('frutas')->where('id', '=', $id)->first();
+        // var_dump($fruta);
+        // die();
+        return view('frutas.fruta-detail', [
+            'fruta' => $fruta
+        ]);
+    }
 }
