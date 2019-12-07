@@ -1,4 +1,5 @@
 <h1>Listado de frutas</h1>
+<h3><a href="{{ action('FrutasController@create')}}">Crear fruta</a></h3>
 <ul>
     {{-- por cada iteracción creame una variable --}}
     @foreach($frutas as $fruta)

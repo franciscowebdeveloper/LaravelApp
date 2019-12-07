@@ -31,4 +31,20 @@ class FrutasController extends Controller
             'fruta' => $fruta
         ]);
     }
+
+    public function create(){
+        return view ('frutas.create-fruta');
+    }
+
+     
+    public function save(Request $request){
+        // guardar registro
+        $fruta = DB::table('frutas')->insert(array(
+            'nombre' => $request->input('nombre'),
+            'descripcion' => $request->input('descripcion'),
+        ));
+
+        //hacemos una redirección cuando terminemos de guardar registro
+        return redirect()->action('FrutasController@index');
+    }
 }
